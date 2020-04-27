@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 
-export const Overlay = styled.ImageBackground`
+export const Overlay = styled.ImageBackground.attrs({
+  resizeMode: 'cover',
+})`
   flex: 1;
 `;
 
@@ -27,6 +29,9 @@ export const AppTitle = styled.Text`
 `;
 
 export const LoginButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   height: 64px;
   width: 90%;
   background: #591dc6;
@@ -37,5 +42,8 @@ export const LoginButton = styled.TouchableOpacity`
 export const LoginButtonText = styled.Text`
   color: #fff;
   font-size: 18px;
-  margin: auto auto;
+`;
+
+export const ButtonIcon = styled.Image`
+  margin-right: 15px;
 `;

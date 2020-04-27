@@ -1,8 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { StatusBar } from 'react-native';
+
 import loginBackground from '../../assets/loginBackground.png';
 import logo from '../../assets/Logo.png';
+import buttonIcon from '../../assets/buttonIcon.png';
+
 import { Neomorph } from 'react-native-neomorph-shadows';
 import { useNavigation } from '@react-navigation/native';
 import {
@@ -12,6 +15,7 @@ import {
   LoginButton,
   LoginButtonText,
   AppTitle,
+  ButtonIcon,
 } from './styles';
 
 export default () => {
@@ -38,6 +42,7 @@ export default () => {
           </Neomorph>
           <AppTitle>jobs finder</AppTitle>
           <LoginButton onPress={() => navigation.navigate('Home')}>
+            <ButtonIcon source={buttonIcon} />
             <LoginButtonText>Logar utilizando Github</LoginButtonText>
           </LoginButton>
         </Container>
