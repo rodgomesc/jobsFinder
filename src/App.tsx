@@ -1,1 +1,1 @@
-export { default } from './containers/Signin';
+export { default } from './routes/index.routes';
